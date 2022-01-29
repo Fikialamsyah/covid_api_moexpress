@@ -2,9 +2,6 @@
 // import models
 const Patient = require("../models/patient.js");
 
-// import express validator
-const { body, validationResult } = require("express-validator");
-
 // create class PatientController
 class PatientController {
     async index(req, res) {
@@ -112,7 +109,7 @@ class PatientController {
         try {
             const positive = await Patient.find({status: 'Positive'});
 
-            // check if status positive is empty
+            // check if positive is empty
             if (positive == '') return res.status(404).json({ message: "Data Not Found!" });
 
             const data = {
