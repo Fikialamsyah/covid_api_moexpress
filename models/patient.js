@@ -21,7 +21,7 @@ const schemaPatient = mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['Positive', 'Negative', 'Dead'],
+        enum: ['Positive', 'Negative', 'Recovered', 'Dead'],
         required: true
     },
     in_date_at: {

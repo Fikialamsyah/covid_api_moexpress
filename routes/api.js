@@ -23,19 +23,19 @@ route.put('/patients/:id', PatientController.update);
 route.delete('/patients/:id', PatientController.destroy);
 
 // route search patient by name
-route.get('/patients/search/:id', PatientController.show);
+route.get('/patients/search/:name', PatientController.show);
 
 // route search patient by status positive
-route.get('/patients/search/positive', PatientController.findByStatus);
+route.get('/patients/status/positive', PatientController.positive);
 
 // route search patient by status negative
-route.get('/patients/search/negative', PatientController.findByStatus);
+route.get('/patients/status/negative', PatientController.negative);
 
 // route search patient by status recovered
-route.get('/patients/search/recovered', PatientController.show);
+route.get('/patients/status/recovered', PatientController.recovered);
 
 // route search patient by status dead
-route.get('/patients/search/dead', PatientController.show);
+route.get('/patients/status/dead', PatientController.dead);
 
 
 
